@@ -1,7 +1,7 @@
 {
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
-    "baseUrl": "C:/Users/Vicente/Desktop/sergio-vera",
+    "baseUrl": ".",
     "paths": {
       "@/*": [
         "src/*"
