@@ -1,0 +1,77 @@
+---
+import InstagramIcon from "@/icons/Instagram.astro";
+import EmailIcon from "@/icons/Email.astro";
+---
+
+<footer class="py-4 mt-3 max-w-[1200px] mx-auto">
+  <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+    <div class="sm:flex sm:items-center sm:justify-between">
+      <a
+        href="/"
+        class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
+      >
+        <img
+          src="/logo.webp"
+          class="h-8"
+          alt="Sergio Vera Logo"
+          loading="lazy"
+        />
+      </a>
+      <ul
+        class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400"
+      >
+        <li>
+          <a href="#inicio" class="hover:underline me-4 md:me-6">Inicio</a>
+        </li>
+        <li>
+          <a href="#sobre-mi" class="hover:underline me-4 md:me-6">Sobre mí</a>
+        </li>
+        <li>
+          <a href="#servicios" class="hover:underline me-4 md:me-6">Servicios</a
+          >
+        </li>
+        <li>
+          <a href="#planes" class="hover:underline me-4 md:me-6">Planes</a>
+        </li>
+        <li>
+          <a href="#contacto" class="hover:underline">Contacto</a>
+        </li>
+      </ul>
+    </div>
+    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-green-500 lg:my-8" />
+    <div class="sm:flex sm:items-center sm:justify-between">
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+        >© {new Date().getFullYear()}
+        <a href="#sobre-mi" class="hover:underline">Sergio Vera™</a>. Todos los
+        Derechos Reservados.
+      </span>
+      <div class="flex mt-4 sm:justify-center sm:mt-0">
+        <!-- Instagram -->
+        <a
+          href="https://www.instagram.com/_sergio.vera_trainer/"
+          class="text-gray-500 hover:text-green-500 dark:hover:text-white ms-5"
+          target="_blank"
+          rel="noopener"
+        >
+          <InstagramIcon />
+          <span class="sr-only">Instagram</span>
+        </a>
+        <!-- Email -->
+        <a
+          href="mailto:sergiovera.pf@gmail.com"
+          class="text-gray-500 hover:text-green-500 dark:hover:text-white ms-5"
+          target="_blank"
+          rel="noopener"
+        >
+          <EmailIcon />
+          <span class="sr-only">Instagram</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <p class="text-xs text-center">
+    <a href="https://portfolio-vixoplank.vercel.app/" target="_blank"
+      >Desarrollado por: <span class="text-green-500">Vicente Vásquez</span></a
+    >
+  </p>
+</footer>

@@ -1,0 +1,110 @@
+---
+import CloseMenu from "@/icons/CloseMenu.astro";
+---
+
+<!-- Nav Mobile -->
+<aside class="navbar-menu relative hidden z-20">
+  <div class="navbar-backdrop fixed inset-0 bg-black opacity-25"></div>
+  <div
+    class="fixed top-0 right-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white dark:bg-neutral-950 border-r overflow-y-auto"
+  >
+    <div class="flex items-center mb-8">
+      <a class="mr-auto text-3xl font-bold leading-none" href="#">
+        <!-- Logo -->
+        <img src="/logo.webp" alt="Sergio Vera Logo" class="w-32" />
+      </a>
+      <!-- Boton X para cerrar el menu -->
+
+      <CloseMenu
+        class="size-8 dark:text-green-500 navbar-close transition duration-500 ease-in-out hover:scale-105 hover:border-b-2 hover:border-green-500"
+      />
+    </div>
+    <nav
+      class="[&>a]:m-1 [&>a]:block [&>a]:p-4 [&>a]:text-sm [&>a]:font-semibold [&>a]:rounded"
+    >
+      <a id="toggle-theme" class="hover:bg-green-50 hover:text-green-600">
+        Cambiar tema
+      </a>
+      <a class="hover:bg-green-50 hover:text-green-600" href="#inicio">Inicio</a
+      >
+
+      <a class="hover:bg-green-50 hover:text-green-600" href="#sobre-mi"
+        >Sobre mí</a
+      >
+
+      <a class="hover:bg-green-50 hover:text-green-600" href="#servicios"
+        >Servicios</a
+      >
+
+      <a class="hover:bg-green-50 hover:text-green-600" href="#planes">Planes</a
+      >
+
+      <a class="hover:bg-green-50 hover:text-green-600" href="#contacto"
+        >Contacto</a
+      >
+    </nav>
+    <div class="mt-auto my-4 text-xs text-center text-gray-400">
+      <p class="my-4">
+        Copyright {new Date().getFullYear()}
+      </p>
+      <a href="https://portfolio-vixoplank.vercel.app/" target="_blank"
+        >Desarrollado por: <span class="text-green-500">Vicente Vásquez</span
+        ></a
+      >
+    </div>
+  </div>
+</aside>
+
+<!-- Menu Mobile -->
+<script>
+  // Burger menus
+  document.addEventListener("DOMContentLoaded", function () {
+    // open
+    const burger = document.querySelectorAll(".navbar-burger");
+    const menu = document.querySelectorAll(".navbar-menu");
+
+    if (burger.length && menu.length) {
+      for (var i = 0; i < burger.length; i++) {
+        burger[i].addEventListener("click", function () {
+          for (var j = 0; j < menu.length; j++) {
+            menu[j].classList.toggle("hidden");
+          }
+        });
+      }
+    }
+
+    // close
+    const close = document.querySelectorAll(".navbar-close");
+    const backdrop = document.querySelectorAll(".navbar-backdrop");
+
+    if (close.length) {
+      for (var i = 0; i < close.length; i++) {
+        close[i].addEventListener("click", function () {
+          for (var j = 0; j < menu.length; j++) {
+            menu[j].classList.toggle("hidden");
+          }
+        });
+      }
+    }
+
+    if (backdrop.length) {
+      for (var i = 0; i < backdrop.length; i++) {
+        backdrop[i].addEventListener("click", function () {
+          for (var j = 0; j < menu.length; j++) {
+            menu[j].classList.toggle("hidden");
+          }
+        });
+      }
+    }
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleThemeBtn = document.getElementById("toggle-theme");
+    toggleThemeBtn.addEventListener("click", () => {
+      const isDarkMode = document.documentElement.classList.toggle("dark");
+      localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+    });
+  });
+</script>

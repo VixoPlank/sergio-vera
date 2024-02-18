@@ -1,0 +1,147 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Services from "@/components/Services.astro";
+import Testimonial from "@/components/Testimonial.astro";
+import Pricing from "@/components/Pricing.astro";
+import Contact from "@/components/Contact.jsx";
+import Static from "@/components/Static.astro";
+import Dumbbell from "@/icons/Dumbbell.astro";
+---
+
+<Layout
+  title="Sergio Vera - Personal Trainer"
+  description="Descubre cómo alcanzar tus metas de fitness y bienestar con Sergio Vera, tu Personal Trainer en Chillán. Servicios personalizados de entrenamiento y nutrición para pérdida de peso, entrenamiento individual y online. Transforma tu vida hoy."
+>
+  <main>
+    <!-- Banner section -->
+    <section
+      class="w-full py-12 md:py-24 lg:py-32 bg-[#48bb78] dark:bg-transparent"
+    >
+      <!-- <HeaderVideo /> -->
+      <div id="inicio" class="container px-4 md:px-6">
+        <div
+          class="flex flex-col items-center justify-center space-y-4 text-center"
+        >
+          <div class="space-y-2">
+            <h1
+              class="text-5xl font-bold tracking-tighter text-yellow-500 sm:text-6xl md:text-7xl lg:text-8xl"
+            >
+              Sergio Vera
+            </h1>
+            <p class="md:text-xl font-semibold">
+              Tu personal trainer de
+              <span class="text-white font-semibold">confianza</span>
+            </p>
+            <p
+              class="mx-auto max-w-[700px] md:text-xl dark:text-green-500 font-semibold"
+            >
+              Transformando vidas con pasión y dedicación,
+              <span class="text-white font-semibold">Sergio Vera</span>
+              impulsa a cada cliente hacia su
+              <span class="text-white font-semibold">máximo potencial</span>.
+            </p>
+          </div>
+          <div class="w-full max-w-sm space-y-2">
+            <a
+              class="inline-flex h-10 items-center justify-center rounded-md bg-white dark:bg-green-500 dark:text-gray-50 px-8 text-base font-semibold text-green-500 shadow hover:bg-gray-100 hover:text-green-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-emerald-700 disabled:pointer-events-none disabled:opacity-50 hover:scale-105 transition duration-500 ease-in-out"
+              href="#sobre-mi"
+            >
+              Empecemos!
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Estadísticas Destacadas -->
+    <Static />
+
+    <!-- Sobre mí -->
+    <section
+      id="sobre-mi"
+      class="w-full max-w-[1200px] mx-auto text-balance mt-12 md:py-24 lg:py-0"
+    >
+      <div
+        class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center"
+      >
+        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+          <img
+            class="object-cover object-center rounded shadow-lg"
+            alt="Personal Trainer"
+            loading="lazy"
+            src="/hero.webp"
+            width="720"
+            height="600"
+          />
+        </div>
+        <div
+          class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-start text-start"
+        >
+          <h1
+            class="text-4xl lg:text-5xl mb-8 font-bold decoration-green-500 dark:text-yellow-500 dark:no-underline underline"
+          >
+            Sobre Mí
+          </h1>
+          <p class="mb-6 leading-relaxed text-lg">
+            Bienvenido a tu nuevo comienzo. Soy
+            <span class="text-green-500 font-bold">Sergio Vera</span>, un
+            apasionado del fitness y la transformación personal. Con más de 5
+            años de experiencia en el sector, estoy dedicado a ayudarte a
+            alcanzar tus metas de salud y bienestar.
+          </p>
+          <p class="mb-6 leading-relaxed text-lg">
+            Mi camino hacia el fitness comenzó lejos de los gimnasios:
+            trabajando en un local de comida rápida. Allí, rodeado de malas
+            opciones alimenticias, mi salud se resintió y mi peso aumentó. Este
+            momento difícil fue, sin embargo, el inicio de una transformación
+            profunda.
+          </p>
+          <p class="mb-6 leading-relaxed text-lg">
+            Empecé a educarme sobre nutrición y ejercicio, cambiando mi vida
+            paso a paso. Esta evolución personal encendió en mí la pasión por el
+            fitness y el deseo de guiar a otros en su propio viaje hacia un
+            estilo de vida más saludable.
+          </p>
+          <h2 class="text-3xl font-bold mb-4 dark:text-green-500">
+            Certificaciones y Cualificaciones
+          </h2>
+          <ul
+            class="list-disc list-inside mb-6 text-lg text-gray-600 dark:text-white"
+          >
+            <li>
+              Certificado Preparador Físico - Comite Olimplito Chile (COCH)
+            </li>
+            <li>
+              Mi especialidad es: Entrenamiento físico para la <span
+                class="text-green-500">salud</span
+              > y <span class="text-green-500">deporte</span>
+            </li>
+            <li>Entenador desde el año 2019</li>
+          </ul>
+          <div class="flex w-full md:justify-start">
+            <a
+              href="#planes"
+              class="inline-flex items-center justify-center rounded-md bg-green-500 px-8 py-3 text-lg font-medium text-white shadow transition-colors hover:bg-green-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-700"
+            >
+              Entrena Conmigo
+              <Dumbbell class="translate-x-1" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mx-24 mb-2 border-b-2 border-green-500"></div>
+    </section>
+
+    <!-- Tipo de Servicios -->
+    <Services />
+
+    <!-- Testimonios -->
+    <Testimonial />
+
+    <!-- Planes -->
+    <Pricing />
+
+    <!-- Contacto -->
+    <Contact client:load />
+  </main>
+</Layout>

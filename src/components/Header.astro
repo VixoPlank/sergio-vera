@@ -1,0 +1,47 @@
+---
+import ThemeIcon from "@/components/ThemeIcon.astro";
+import MobileMenu from "@/components/MobileMenu.astro";
+import Menu from "@/icons/Menu.astro";
+---
+
+<header
+  class="flex items-center justify-between mx-14 py-4 mt-3 font-medium bg-transparent z-10"
+>
+  <div class="lg:block">
+    <img src="/logo.webp" alt="Sergio Vera Logo" class="w-32" />
+  </div>
+  <nav class="hidden xl:flex space-x-5">
+    <a
+      class="transition duration-500 ease-in-out hover:scale-105 hover:border-b-2 hover:border-green-500"
+      href="#inicio">Inicio</a
+    >
+    <a
+      class="transition duration-500 ease-in-out hover:scale-105 hover:border-b-2 hover:border-green-500"
+      href="#sobre-mi">Sobre mí</a
+    >
+    <a
+      class="transition duration-500 ease-in-out hover:scale-105 hover:border-b-2 hover:border-green-500"
+      href="#servicios">Servicios</a
+    >
+    <a
+      class="transition duration-500 ease-in-out hover:scale-105 hover:border-b-2 hover:border-green-500"
+      href="#planes">Planes</a
+    >
+    <a
+      class="transition duration-500 ease-in-out hover:scale-105 hover:border-b-2 hover:border-green-500"
+      href="#contacto">Contacto</a
+    >
+  </nav>
+  <div
+    class="transition duration-500 ease-in-out hover:scale-105 hover:border-b-2 hover:border-green-500 lg:block hidden"
+  >
+    <ThemeIcon />
+  </div>
+
+  <div class="navbar-burger flex lg:hidden">
+    <div class="navbar-burger navbar-backdrop" aria-label="Menu Hamburguesa">
+      <Menu class="size-8" />
+    </div>
+  </div>
+</header>
+<MobileMenu />
